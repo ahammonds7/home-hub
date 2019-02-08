@@ -11,6 +11,7 @@ steps:
   image: plugins/docker
   settings:
     username: alexham
-    password: TsiSOPHC6zCPMAwnmJ6GQ8Ou
+    password:
+      from_secret: DOCKER_HUB_PASSWORD
     repo: alexham/home-hub
     tags: latest
