@@ -1,0 +1,16 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: node
+  commands:
+    - npm install
+    - npm test:coverage
+- name: docker  
+  image: plugins/docker
+  settings:
+    username: alexham
+    password: TsiSOPHC6zCPMAwnmJ6GQ8Ou
+    repo: alexham/home-hub
+    tags: latest
